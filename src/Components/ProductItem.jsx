@@ -5,7 +5,7 @@ const ProductItem = ({ id, name, price, description, image }) => {
   const [showImage, setShowImage] = useState(false);
 
   const handleButtonClick = () => {
-    setShowImage(!showImage); // Toggle the visibility of the image
+    setShowImage(!showImage);
   };
 
   return (
@@ -18,9 +18,9 @@ const ProductItem = ({ id, name, price, description, image }) => {
         </ul>
       </button>
       {showImage && (
-         <div className="image-container">
+        <div className="image-container">
           <img className="product-image" src={image} alt={`Photo of ${name}`} />
-         </div>
+        </div>
       )}
     </>
   );
