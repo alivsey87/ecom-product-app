@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import ProductList from './Components/ProductList'
-import './App.css'
+import React from 'react';
+import { useState } from 'react';
+import ProductList from './Components/ProductList';
+import './App.css';
 
 const App = () => {
 
   const [products, setProducts] = useState(
     [
-      {id: 1, name: "mouse", price: "$20", description: "a mouse peripheral"},
-      {id: 2, name: "keyboard", price: "$25", description: "a keyboard peripheral"},
-      {id: 3, name: "monitor", price: "$400", description: "a monitor to display UI"}
+      {id: 1, name: "Mouse", price: "$20", description: "A mouse peripheral", image: '/mouse.jpg'},
+      {id: 2, name: "Keyboard", price: "$25", description: "A keyboard peripheral", image: '/keyboard.jpg'},
+      {id: 3, name: "Monitor", price: "$400", description: "A monitor to display UI", image: '/monitor.jpg'}
     ]
   ) 
 
@@ -18,7 +19,10 @@ const App = () => {
   }
 
   return (
-    <ProductList products={products} />
+    <>
+      <h1>Our Products:</h1>
+      <ProductList products={products} />
+    </>
   )
 }
 
