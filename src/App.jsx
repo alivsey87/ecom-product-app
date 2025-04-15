@@ -32,9 +32,10 @@ const App = () => {
 
   return (
     <>
-      <h1>Products</h1>
+      <h1>Welcome to Comp-Pheral</h1>
+      <h2>Our Products:</h2>
       <ProductList products={products} />
-      <button className='remove-button' onClick={removeProduct} disabled={products.length === 0}>Remove item</button>
+      <button className='remove-button' onClick={removeProduct} disabled={!hasItems}>Remove item</button>
       {!hasItems && (
         <div>
           <p className='items-warning'>THERE ARE NO ITEMS!</p>
